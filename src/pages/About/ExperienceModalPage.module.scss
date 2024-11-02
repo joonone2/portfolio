@@ -1,0 +1,142 @@
+@import 'Styles/common/_variables.scss';
+@import 'Styles/responsive.scss';
+
+.experience-container {
+  h1 {
+    padding-bottom: 24px;
+    @include desktop {
+      padding-bottom: 32px;
+      font-size: 32px;
+    }
+  }
+  h2 {
+    padding-bottom: 24px;
+    @include desktop {
+      padding-bottom: 32px;
+    }
+  }
+  .info-wrapper {
+    display: flex;
+    gap: 20px;
+    padding-bottom: 24px;
+    @include desktop {
+      padding-bottom: 32px;
+    }
+    h3 {
+      font-weight: 700;
+    }
+  }
+  > h3 {
+    padding-bottom: 8px;
+    @include desktop {
+      padding-bottom: 12px;
+    }
+  }
+  .detail-container {
+    .detail-wrapper {
+      padding-bottom: 8px;
+      @include desktop {
+        padding-bottom: 12px;
+      }
+    }
+    .detail-wrapper {
+      h4 {
+      }
+      .img-slide-container {
+        overflow: auto;
+        display: flex;
+        gap: 16px;
+        .image-container {
+          img {
+          }
+        }
+      }
+      .image-container {
+        margin-top: 4px;
+        width: 70vw;
+        min-width: 70vw;
+        max-width: 70vw;
+        img {
+          width: 100%;
+          max-height: 70vh;
+          height: 70vw;
+          object-fit: cover;
+        }
+      }
+      .image-caption {
+        color: $cream3;
+      }
+    }
+  }
+}
+
+.modal-wrapper {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  padding: 0 20px;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  color: black;
+  z-index: 10000;
+  .close-button {
+    cursor: pointer;
+    position: fixed;
+    left: 10px;
+    top: 10px;
+    z-index: 9999;
+  }
+}
+
+.modal {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  min-width: 320px;
+  min-height: 90vh;
+  width: 90vw;
+  height: 90vh;
+  background-color: white;
+  color: $black;
+  border-radius: 4px;
+  box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.5);
+  white-space: pre-line;
+  padding: 20px 20px;
+  overflow: auto;
+  @include tablet {
+    width: 80vw;
+  }
+  @include desktop {
+    width: 70vw;
+    padding: 44px 70px;
+  }
+  .detail-container {
+    .detail-wrapper {
+      .image-container {
+        width: 60vw;
+        min-width: 60vw;
+        max-width: 60vw;
+        @include desktop {
+          width: 50vw;
+          min-width: 50vw;
+          max-width: 50vw;
+        }
+        img {
+          width: 100%;
+          max-height: 70vh;
+          height: 60vw;
+          object-fit: cover;
+        }
+      }
+      .image-caption {
+        color: $cream3;
+      }
+    }
+  }
+}

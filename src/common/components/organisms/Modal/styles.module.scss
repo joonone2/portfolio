@@ -1,0 +1,220 @@
+@import 'Styles/responsive.scss';
+@import 'Styles/common/_variables.scss';
+
+.custom-overlay {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 9999;
+}
+
+.custom-modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 250px;
+  min-height: 106px;
+  background-color: $background;
+  border-radius: 3px;
+  box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.4);
+  white-space: pre-line;
+  padding: 20px;
+}
+.modal-title {
+  // font-size: 18px;
+  // font-weight: 500;
+  // line-height: 1.39;
+  // letter-spacing: -0.96px;
+  color: $greyscale9;
+  word-break: keep-all;
+}
+
+.modal-description {
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 1.54;
+  letter-spacing: -0.65px;
+  color: $greyscale8;
+  margin-top: 10px;
+  cursor: pointer;
+  white-space: pre-line;
+
+  // &:hover {
+  //   opacity: 0.9;
+  // }
+  hr {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  > div {
+    font-size: 13px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.54;
+    letter-spacing: -0.65px;
+    text-align: left;
+    color: $greyscale8;
+    width: 100%;
+    strong {
+      font-weight: bold;
+      letter-spacing: -0.95px;
+    }
+  }
+  table {
+    font-weight: 400px;
+    tr {
+      td {
+        padding: 0;
+        &:first-child {
+          margin-right: 10px;
+          display: block;
+          position: relative;
+          > span {
+            border: 1px solid #ddd;
+            border-radius: 50%;
+            width: 22px;
+            height: 22px;
+            display: inline-block;
+            text-align: center;
+            line-height: 23px;
+            font-size: 13px;
+            font-weight: 500;
+            color: #919191;
+          }
+          div {
+            width: 1px;
+            background-color: #ddd;
+            position: absolute;
+            left: 11px;
+            right: 0;
+            top: 22px;
+            bottom: 0;
+          }
+        }
+        &:last-child {
+          div {
+            &:first-child {
+              font-size: 15px;
+              font-weight: bold;
+              line-height: 1.53;
+              letter-spacing: -0.8px;
+              color: #333;
+              margin-bottom: 10px;
+            }
+            &:last-child {
+              font-size: 13px;
+              line-height: 1.54;
+              letter-spacing: -0.69px;
+              color: #919191;
+              margin-bottom: 20px;
+              font-weight: 400;
+            }
+          }
+        }
+      }
+      &:last-child {
+        td {
+          div:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+.modal-button-group {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 20px;
+
+  & > p {
+    font-size: 15px;
+    line-height: 1.46;
+    letter-spacing: -0.69px;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+@keyframes fade-in {
+  from {
+    visibility: hidden;
+    opacity: 0;
+  }
+  to {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  from {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+  }
+  to {
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+@keyframes slide-fade-in {
+  from {
+    transform: translateY(150%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-fade-out {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(150%);
+  }
+}
+.popup-modal {
+  width: 320px;
+  font-family: 'pretendard';
+  border-radius: 8px;
+  .popup-title {
+    word-break: keep-all;
+    color: $black;
+    text-align: center;
+  }
+  .popup-description {
+    margin-top: 4px;
+    word-break: keep-all;
+    color: $black;
+  }
+  .modal-button-group {
+    justify-content: space-between;
+    gap: 8px;
+    button {
+      width: 100%;
+      padding: 0 10px;
+      text-align: center;
+      background-color: $black;
+      color: $background;
+      height: 48px;
+      border-radius: 4px;
+      &:hover {
+        background-color: $cream3;
+      }
+    }
+  }
+}
