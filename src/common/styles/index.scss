@@ -1,0 +1,74 @@
+@import './common/bootstrap-reboot.css';
+@import './common/include-media';
+@import './common/animate.css';
+@import './common/_variables';
+
+@font-face {
+  font-family: 'suit';
+  font-weight: 100;
+  src: url('../../assets/fonts/SUIT-Thin.ttf') format('opentype');
+}
+@font-face {
+  font-family: 'suit';
+  font-weight: 200;
+  src: url('../../assets/fonts/SUIT-ExtraLight.ttf') format('opentype');
+}
+@font-face {
+  font-family: 'suit';
+  font-weight: 300;
+  src: url('../../assets/fonts/SUIT-Light.ttf') format('opentype');
+}
+@font-face {
+  font-family: 'suit';
+  font-weight: 400;
+  src: url('../../assets/fonts/SUIT-Regular.ttf') format('opentype');
+}
+@font-face {
+  font-family: 'suit';
+  font-weight: 500;
+  src: url('../../assets/fonts/SUIT-Medium.ttf') format('opentype');
+}
+@font-face {
+  font-family: 'suit';
+  font-weight: 600;
+  src: url('../../assets/fonts/SUIT-SemiBold.ttf') format('opentype');
+}
+@font-face {
+  font-family: 'suit';
+  font-weight: 700;
+  src: url('../../assets/fonts/SUIT-Bold.ttf') format('opentype');
+}
+
+body {
+  margin: 0;
+  background: $background !important;
+  font-family: 'suit';
+  #root {
+    height: 100%;
+  }
+}
+
+input,
+textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 0;
+  background-color: #fff;
+}
+
+button {
+  outline: none !important;
+  border: none;
+  padding: 0;
+  background: transparent;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+a {
+  cursor: pointer;
+  color: #212121;
+}

@@ -1,0 +1,13 @@
+[build]
+  command = "CI= yarn build"
+  publish = "build"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[build.environment]
+  NODE_VERSION = "16"
+  YARN_VERSION = "1.22.19"
+  CI = "false"
