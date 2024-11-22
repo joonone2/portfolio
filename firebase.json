@@ -1,6 +1,5 @@
 {
   "hosting": {
-    "site" : "joonwon-portfolio",
     "public": "build",
     "ignore": [
       "firebase.json",

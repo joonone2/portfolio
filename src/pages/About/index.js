@@ -367,10 +367,11 @@ function About({ history, location }) {
                       src={require(`../../assets/images/${item.src}`)}
                       alt={item.label}
                       style={{
-                        width: '400px',
+                        width: 'calc(50vw - 20px)', // 화면 크기에 따라 동적 크기 조정
+                        maxWidth: '400px',          // 최대 크기 제한
                         margin: '15px 0',
                         borderRadius: '8px',
-                        objectFit: 'cover', // 이미지 비율 유지
+                        objectFit: 'cover',         // 이미지 비율 유지
                       }}
                     />
                     <div
@@ -379,11 +380,11 @@ function About({ history, location }) {
                         bottom: '0px',
                         left: '50%',
                         transform: 'translateX(-50%)',
-                        color: 'black', // 텍스트 색상
+                        color: 'black',
                         padding: '5px 10px',
                         borderRadius: '4px',
-                        fontSize: '14px', // 글자 크기
-                        fontWeight: 'bold', // 강조된 텍스트
+                        fontSize: '14px',
+                        fontWeight: 'bold',
                       }}
                     >
                       {item.label}
@@ -392,6 +393,13 @@ function About({ history, location }) {
                 ))}
               </ul>
             </section>
+
+
+
+            
+
+
+            
 
               <br></br>  
               <br></br>  
@@ -548,11 +556,13 @@ function About({ history, location }) {
                       src={require(`../../assets/images/${item.src}`)}
                       alt={item.label}
                       style={{
-                        width: '400px',
-                        margin: '15px 0',
-                        borderRadius: '8px',
-                        objectFit: 'center', // 비율을 유지하지 않고 영역에 맞게 잘림
-                        boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)', // 그림자 효과 추가
+                        width: '100%',              // 부모 요소의 크기에 맞게 100%
+                        maxWidth: '400px',          // 최대 너비 제한
+                        height: 'auto',             // 비율 유지
+                        margin: '15px 0',           // 위아래 간격
+                        borderRadius: '8px',        // 둥근 모서리
+                        objectFit: 'cover',         // 이미지 비율 유지하면서 크기에 맞게 채우기
+                        boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)', // 그림자 효과
                       }}
                     />
                     <div
@@ -574,15 +584,6 @@ function About({ history, location }) {
                 ))}
               </ul>
             </section>
-
-
-
-
-            
-        
-            
-
-              
 
             </ol>
 
